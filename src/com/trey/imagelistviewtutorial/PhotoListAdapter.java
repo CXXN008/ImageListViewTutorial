@@ -34,13 +34,14 @@ public class PhotoListAdapter extends ArrayAdapter<Bitmap> {
 	    }
 
 	    final ImageView imageView = (ImageView) rowView.findViewById(R.id.tablePhoto);
-	    final int pos = position;
-	    ((Activity) context).runOnUiThread(new Runnable() {
+	    imageView.setImageBitmap(bitmaps.get(position));
+	    //final int pos = position;
+	   /* ((Activity) context).runOnUiThread(new Runnable() {
 			public void run() {
 			    imageView.setImageBitmap(bitmaps.get(pos));
 
 			}
-		});
+		}); */
 	    return rowView;
 	  }
 
