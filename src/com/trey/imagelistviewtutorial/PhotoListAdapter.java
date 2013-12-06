@@ -30,18 +30,10 @@ public class PhotoListAdapter extends ArrayAdapter<Bitmap> {
 	    if (rowView == null) {
 	      LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 	      rowView = inflater.inflate(R.layout.tablephoto, null);
-	      //ImageView imageView = (ImageView) rowView.findViewById(R.id.tablePhoto);
 	    }
 
-	    final ImageView imageView = (ImageView) rowView.findViewById(R.id.tablePhoto);
+	    ImageView imageView = (ImageView) rowView.findViewById(R.id.tablePhoto);
 	    imageView.setImageBitmap(bitmaps.get(position));
-	    //final int pos = position;
-	   /* ((Activity) context).runOnUiThread(new Runnable() {
-			public void run() {
-			    imageView.setImageBitmap(bitmaps.get(pos));
-
-			}
-		}); */
 	    return rowView;
 	  }
 

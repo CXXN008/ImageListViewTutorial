@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 
 	private void populatePhotoTable() {
 		// TODO Auto-generated method stub
-		final PhotoListAdapter adapter = new PhotoListAdapter(this, 0, bitmaps);
+		PhotoListAdapter adapter = new PhotoListAdapter(this, 0, bitmaps);
 		ListView myList = (ListView) findViewById(android.R.id.list);
 		myList.setAdapter(adapter);
 		
